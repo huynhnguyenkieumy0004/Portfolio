@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Huỳnh Nguyễn Kiều My</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --primary: #4e73df;
+      --secondary: #6f42c1;
+      --text: #333;
+      --muted: #666;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e9eef5, #f9fbfd);
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 70px auto;
+      background: #fff;
+      padding: 70px;
+      border-radius: 22px;
+      box-shadow: 0 30px 70px rgba(0,0,0,.1);
+    }
+
+    /* ================= HEADER ================= */
+    .header {
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 55px;
+      border-radius: 20px;
+      color: #fff;
+      margin-bottom: 60px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    .header p {
+      margin-top: 12px;
+      font-size: 18px;
+    }
+
+    /* ================= PROFILE IMAGE ================= */
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-img:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 22px 45px rgba(78,115,223,0.35);
+    }
+
+    /* ================= BUTTON ================= */
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #fff;
+      color: var(--primary);
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+
+    /* ================= TITLES ================= */
+    h2 {
+      margin-top: 60px;
+      color: var(--primary);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 6px;
+      height: 70%;
+      background: linear-gradient(var(--primary), var(--secondary));
+      border-radius: 4px;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    /* ================= DIVIDER ================= */
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ddd, transparent);
+      margin: 60px 0;
+    }
+
+    .footer {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* ================= EFFECTS ================= */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.7s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header fade-in">
+    <img src="avatar.jpg" alt="Huynh Nguyen Kieu My" class="profile-img">
+    <h1>Huỳnh Nguyễn Kiều My</h1>
+    <p>Information Technology Student</p>
+    <a href="projects.html" class="btn">🚀 View Projects</a>
+  </div>
+
+  <!-- ABOUT -->
+  <h2 class="reveal">About Me</h2>
+  <p class="reveal">
+    I am a friendly and sociable person with a positive attitude, who enjoys participating
+    in social activities. I have strong communication skills and a collaborative mindset.
+    While I tend to think carefully and analyze problems deeply, I am continuously improving
+    my decision-making efficiency.
+  </p>
+
+  <!-- EDUCATION -->
+  <h2 class="reveal">Education</h2>
+  <p class="reveal"><strong>Information Technology Student</strong></p>
+  <p class="reveal"><strong>GPA:</strong> 3.0 / 4.0</p>
+  <p class="reveal">
+    During my studies, I have been equipped with both fundamental and specialized knowledge
+    in Information Technology. I have completed many practice-oriented courses, gaining a
+    clear understanding of software development processes and teamwork.
+  </p>
+
+  <!-- COURSEWORK -->
+  <h2 class="reveal">Relevant Coursework</h2>
+  <ul class="reveal">
+    <li>Mobile Application Development</li>
+    <li>Software Testing</li>
+    <li>Agile / Scrum</li>
+    <li>Database Systems</li>
+    <li>Basic Web Programming</li>
+    <li>Information Security</li>
+    <li>Advanced Programming</li>
+    <li>Data Structures and Algorithms</li>
+    <li>Operating Systems</li>
+    <li>Project Management</li>
+    <li>User Interface Programming</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <h2 class="reveal">Relevant Skills</h2>
+
+  <p class="reveal"><strong>Technical Skills</strong></p>
+  <ul class="reveal">
+    <li>Web Development: HTML, CSS, JavaScript (basic)</li>
+    <li>Mobile Development: Android (Java / Kotlin – basic)</li>
+    <li>Backend: Node.js, Python (basic)</li>
+    <li>Software Testing: Manual Testing, Test Case Writing</li>
+    <li>Databases: MySQL, SQLite</li>
+  </ul>
+
+  <p class="reveal"><strong>Tools & Technologies</strong></p>
+  <ul class="reveal">
+    <li>Git / GitHub</li>
+    <li>Microsoft Word, Excel, PowerPoint</li>
+    <li>Google Docs, Google Sheets</li>
+  </ul>
+
+  <p class="reveal"><strong>Soft Skills</strong></p>
+  <ul class="reveal">
+    <li>Teamwork</li>
+    <li>Time management</li>
+    <li>Logical thinking and attention to detail</li>
+    <li>Self-learning ability and quick adaptability</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <!-- CERTIFICATIONS -->
+  <h2 class="reveal">Certifications</h2>
+  <ul class="reveal">
+    <li>IELTS – Currently studying and preparing</li>
+    <li>MOS (Microsoft Office Specialist) – Currently studying</li>
+  </ul>
+
+  <div class="footer">
+    © 2026 Huỳnh Nguyễn Kiều My
+  </div>
+
+</div>
+
+<!-- SCROLL REVEAL SCRIPT -->
+<script>
+  function revealOnScroll() {
+    document.querySelectorAll('.reveal').forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+
+</body>
+</html>
